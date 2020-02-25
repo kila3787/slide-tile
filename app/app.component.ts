@@ -40,11 +40,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public items: any[] = [
-    { url: 'https://bit.ly/2cJjYuB' },
-    { url: 'https://bit.ly/2cTBNaL' },
-    { url: 'https://bit.ly/2cJl3Cx' }
+    { url: 'https://langenkrans.se/img-test.png' },
+    { url: 'https://langenkrans.se/test-img.png' }
   ];
   public width = '100%';
-  public height = '300px';
+  public height = '280px';
 }
 

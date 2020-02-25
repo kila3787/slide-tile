@@ -10,13 +10,14 @@ import { Component } from '@angular/core';
     [pageable]="true">
       <ng-template let-item="item">
           <h2 class="demo-title">{{item.title}}</h2>
-          <img src='{{item.url}}' alt='{{item.title}}' [ngStyle]="{width: '100%'}" draggable="false" />
+          <img src='{{item.url}}' [ngStyle]="{height: 'auto'}" draggable="false" />
       </ng-template>
   </kendo-scrollview>
   `,
   styles: [`
     .k-scrollview-wrap {
       margin: 0 auto;
+      background: #FAF9F5;
     }
     .demo-title {
       position: absolute;
@@ -24,21 +25,26 @@ import { Component } from '@angular/core';
       left: 0;
       right: 0;
       margin: 0;
-      padding: 15px;
+      padding: 10px;
       color: #fff;
-      background-color: rgba(0,0,0,.4);
+      background-color: rgba(32,55,70, . 20);
       text-align: center;
-      font-size: 24px;
+      font-size: 14px;
+      font-family: "Nunito Sans",sans-serif;
     }
+   .kendo-scrollview.k-scrollview-wrap .k-scrollview-pageable>li.k-button.k-primary, kendo-scrollview.k-scrollview-wrap .k-scrollview-nav>li.k-link.k-primary, div.k-scrollview .k-scrollview-pageable>li.k-button.k-primary, div.k-scrollview .k-scrollview-nav>li.k-link.k-primary {
+    border-color: #fffff;
+    background-color: #fffff;
+}
   `]
 })
 export class AppComponent {
   public items: any[] = [
-    { title: 'Flower', url: 'https://bit.ly/2cJjYuB' },
-    { title: 'Mountain', url: 'https://bit.ly/2cTBNaL' },
-    { title: 'Sky', url: 'https://bit.ly/2cJl3Cx' }
+    { url: 'https://bit.ly/2cJjYuB' },
+    { url: 'https://bit.ly/2cTBNaL' },
+    { url: 'https://bit.ly/2cJl3Cx' }
   ];
   public width = '100%';
-  public height = '500px';
+  public height = '300px';
 }
 
